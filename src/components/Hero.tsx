@@ -153,7 +153,7 @@ export default function Hero() {
               transition={{ duration: 0.55, delay: 0.24 }}
               style={{ color: "rgba(255,255,255,0.6)", fontSize: 15, lineHeight: 1.7, marginBottom: 36, maxWidth: 480 }}
             >
-              A structured and practical networking program designed to bridge academic learning and real-world network engineering practices. From fundamentals to enterprise-grade implementation.
+              A structured technical learning ecosystem designed to bridge academic networking concepts with real-world infrastructure engineering practices.
             </motion.p>
 
             <motion.div

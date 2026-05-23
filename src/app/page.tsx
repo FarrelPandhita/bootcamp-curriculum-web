@@ -5,6 +5,7 @@ import PhilosophySection from "@/components/PhilosophySection";
 import OverviewSection from "@/components/OverviewSection";
 import RoadmapSection from "@/components/RoadmapSection";
 import SyllabusSection from "@/components/SyllabusSection";
+import IntegratedLabsSection from "@/components/IntegratedLabsSection";
 import ToolsSection from "@/components/ToolsSection";
 import CaseStudySection from "@/components/CaseStudySection";
 import AssessmentSection from "@/components/AssessmentSection";
@@ -23,6 +24,7 @@ export default function Home() {
       <OverviewSection />
       <RoadmapSection />
       <SyllabusSection />
+      <IntegratedLabsSection />
       <ToolsSection />
       <CaseStudySection />
       <AssessmentSection />

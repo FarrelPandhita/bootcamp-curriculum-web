@@ -250,7 +250,7 @@ export default function RoadmapSection() {
                                 <p style={{ fontSize: 10, fontWeight: 700, color: "#94a3b8", letterSpacing: "0.06em", marginBottom: 6 }}>
                                   {block.label.toUpperCase()}
                                 </p>
-                                {block.items.map((item) => (
+                                {block.items.map((item: string) => (
                                   <div key={item} style={{ display: "flex", gap: 6, alignItems: "flex-start", marginBottom: 4 }}>
                                     <div style={{ width: 4, height: 4, borderRadius: "50%", background: "#cbd5e1", marginTop: 6, flexShrink: 0 }} />
                                     <span style={{ fontSize: 12, color: "#475569", lineHeight: 1.5 }}>

@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#why", label: "Why This Program" },
-  { href: "#roadmap", label: "Roadmap" },
-  { href: "#syllabus", label: "Syllabus" },
-  { href: "#tools", label: "Tools" },
+  { href: "#overview", label: "Overview" },
+  { href: "#network-track", label: "Network Engineering" },
+  { href: "#linux-track", label: "Linux Sysadmin" },
+  { href: "#integrated-labs", label: "Integrated Labs" },
+  { href: "#case-studies", label: "Case Studies" },
   { href: "#capstone", label: "Capstone" },
   { href: "#faq", label: "FAQ" },
 ];

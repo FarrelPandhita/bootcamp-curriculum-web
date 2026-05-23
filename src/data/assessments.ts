@@ -23,7 +23,7 @@ export const programAssessments: AssessmentComponent[] = [
     label: "Final Capstone",
     percentage: 30,
     color: "#7c3aed",
-    description: "A comprehensive enterprise network design and implementation project simulating a real-world client request.",
+    description: "Enterprise Infrastructure Project integrating Cisco, MikroTik, Linux, and Omada Wireless.",
   },
 ];
 

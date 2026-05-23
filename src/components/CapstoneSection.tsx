@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 import { Trophy, CheckSquare } from "lucide-react";
 
 const capstoneRequirements = [
-  { area: "VLAN Design", desc: "Segment network by department with proper tagging and trunk configuration" },
-  { area: "Routing Protocol", desc: "Implement OSPF multi-area or EIGRP across HQ and branch sites" },
-  { area: "Enterprise Wireless", desc: "Design WLC-managed wireless network with SSID-to-VLAN mapping" },
-  { area: "Firewall & ACL", desc: "Implement Zone-Based Firewall with granular access control policies" },
-  { area: "QoS Policy", desc: "Classify and prioritize voice, video, and critical business traffic" },
-  { area: "Redundancy", desc: "Configure HSRP/VRRP and STP for Layer 2/3 high availability" },
+  { area: "Multi-Vendor Routing", desc: "Integrate Cisco Core and MikroTik Edge with static/dynamic routing" },
+  { area: "VLAN Segmentation", desc: "Segment network by department with proper tagging across vendors" },
+  { area: "Linux Services", desc: "Deploy and secure internal DNS, DHCP, and Web services on Linux VMs" },
+  { area: "Firewall & ACL", desc: "Implement perimeter defense on MikroTik and internal ACLs on Cisco" },
+  { area: "QoS Policy", desc: "Classify and prioritize critical traffic across the entire topology" },
+  { area: "Enterprise Wireless", desc: "Integrate Omada Wireless controllers into the enterprise network" },
 ];
 
 const deliverables = [
-  "Complete network topology diagram (Visio/draw.io standard)",
-  "IP address plan document (all VLANs, subnets, hosts)",
-  "Full device configuration backup files",
-  "Technical design document (rationale and design decisions)",
-  "Troubleshooting report (3 intentional failures solved)",
+  "Comprehensive network topology diagram (Visio/draw.io)",
+  "Detailed IP addressing and VLAN schema",
+  "Full device configuration backup files (Cisco, MikroTik, Linux, Omada)",
+  "Architecture explanation and technical rationale",
+  "Troubleshooting report documenting resolutions to intentional failures",
 ];
 
 export default function CapstoneSection() {
@@ -37,10 +37,10 @@ export default function CapstoneSection() {
             border: "1px solid rgba(124,58,237,0.18)",
           }}>FINAL CAPSTONE</span>
           <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.5rem)", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.03em", marginBottom: 14 }}>
-            Build an Enterprise Network from Scratch
+            Enterprise Infrastructure Project
           </h2>
-          <p style={{ color: "#64748b", fontSize: 16, maxWidth: 540, margin: "0 auto" }}>
-            The capstone is the final proof of competency — students design, implement, and present a full enterprise network environment.
+          <p style={{ color: "#64748b", fontSize: 16, maxWidth: 640, margin: "0 auto" }}>
+            The final proof of competency. Students design, build, and troubleshoot a complete multi-vendor topology: Internet → MikroTik Edge → Cisco Core → Linux Services → Enterprise Wireless.
           </p>
         </motion.div>
 
@@ -65,8 +65,8 @@ export default function CapstoneSection() {
               <Trophy size={24} color="#a78bfa" />
             </div>
             <div>
-              <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, fontWeight: 700, letterSpacing: "0.06em" }}>WEEKS 15–16</p>
-              <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 800 }}>Enterprise Network Capstone</h3>
+              <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, fontWeight: 700, letterSpacing: "0.06em" }}>FINAL CAPSTONE</p>
+              <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 800 }}>Multi-Vendor Infrastructure Design</h3>
             </div>
           </div>
 

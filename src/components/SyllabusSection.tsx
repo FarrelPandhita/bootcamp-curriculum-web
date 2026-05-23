@@ -17,9 +17,13 @@ export default function SyllabusSection() {
   const [openSession, setOpenSession] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedWeek, setSelectedWeek] = useState<number | "All">("All");
+  const [activeTrack, setActiveTrack] = useState<"network" | "linux">("network");
 
   // Filtering logic
   const filteredModules = curriculumModules.filter((mod) => {
+    if (activeTrack === "network" && mod.id > 100) return false;
+    if (activeTrack === "linux" && mod.id < 100) return false;
+
     const matchesSearch = mod.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           mod.description.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -34,7 +38,7 @@ export default function SyllabusSection() {
   const allWeeks = Array.from({ length: 16 }, (_, i) => i + 1);
 
   return (
-    <section id="syllabus" style={{ background: "#fff", padding: "96px 0" }}>
+    <section id="network-track" style={{ background: "#fff", padding: "96px 0" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,6 +59,40 @@ export default function SyllabusSection() {
             Every session is structured with objectives, hands-on labs, CLI commands, and troubleshooting challenges.
           </p>
         </motion.div>
+
+        {/* Track Tabs */}
+        <div id="linux-track" style={{ display: "flex", justifyContent: "center", marginBottom: 40 }}>
+          <div style={{ display: "flex", background: "#f8f9fb", padding: 6, borderRadius: 12, border: "1px solid #e2e8f0" }}>
+            <button
+              onClick={() => { setActiveTrack("network"); setOpenModule(1); }}
+              style={{
+                padding: "12px 24px",
+                background: activeTrack === "network" ? "#fff" : "transparent",
+                color: activeTrack === "network" ? "#0f172a" : "#64748b",
+                fontWeight: 700, fontSize: 15, border: "none",
+                borderRadius: 8, cursor: "pointer",
+                boxShadow: activeTrack === "network" ? "0 2px 8px rgba(0,0,0,0.06)" : "none",
+                transition: "all 0.2s",
+              }}
+            >
+              Network Engineering (PRIMARY)
+            </button>
+            <button
+              onClick={() => { setActiveTrack("linux"); setOpenModule(101); }}
+              style={{
+                padding: "12px 24px",
+                background: activeTrack === "linux" ? "#fff" : "transparent",
+                color: activeTrack === "linux" ? "#0f172a" : "#64748b",
+                fontWeight: 700, fontSize: 15, border: "none",
+                borderRadius: 8, cursor: "pointer",
+                boxShadow: activeTrack === "linux" ? "0 2px 8px rgba(0,0,0,0.06)" : "none",
+                transition: "all 0.2s",
+              }}
+            >
+              Linux Sysadmin (SUPPORTING)
+            </button>
+          </div>
+        </div>
 
         {/* Filters */}
         <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 32, justifyContent: "space-between", alignItems: "center" }}>
